@@ -21,7 +21,7 @@ button {
   margin: 0 auto;
 }
 
-h1, h2 {
+h1, input {
   font-family: 'Playfair Display', serif;
 }
 
@@ -47,6 +47,13 @@ p {
   padding: 15px;
   color: #afafaf;
   font-size: 0.8em;
+}
+
+input {
+  width: 100%;
+  border: none;
+  font-size: 25px;
+  outline: none;
 }
 
 textarea {
