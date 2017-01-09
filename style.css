@@ -54,6 +54,7 @@ input {
   border: none;
   font-size: 25px;
   outline: none;
+  background: transparent;
 }
 
 textarea {
@@ -90,6 +91,10 @@ button {
 
 button:hover {
   background: rgba(0,0,0, 0.10);
+}
+
+button:focus {
+  outline:0;
 }
 
 .note {
