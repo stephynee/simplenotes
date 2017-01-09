@@ -7,8 +7,13 @@ body {
 body {
   background-color: #303030;
   margin-top: 40px;
-  font-family: 'Work Sans', sans-serif;
   font-size: 20px;
+}
+
+body,
+textarea,
+button {
+  font-family: 'Work Sans', sans-serif;
 }
 
 #container {
@@ -16,10 +21,13 @@ body {
   margin: 0 auto;
 }
 
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
 h1 {
   margin: 0;
   margin-bottom: -20px;
-  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.3em;
 }
@@ -39,6 +47,42 @@ p {
   padding: 15px;
   color: #afafaf;
   font-size: 0.8em;
+}
+
+textarea {
+  overflow: hidden;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  font-size: 20px;
+}
+
+.color-select {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-select > div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+button,
+.color-select > div {
+  cursor: pointer;
+}
+
+button {
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+}
+
+button:hover {
+  background: rgba(0,0,0, 0.10);
 }
 
 .note {
@@ -94,6 +138,11 @@ p {
 /////////////////////////////////*/
 
 @media (min-width: 600px) {
+  .color-select > div {
+    width: 30px;
+    height: 30px;
+  }
+
   #container {
     width: 500px;
   }
