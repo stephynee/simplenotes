@@ -5,9 +5,8 @@
 
   function openWriteNote() {
     var writeInner = writeNote.innerHTML;
-    
+
     if(writeInner === 'Write note') {
-      console.log('clicked');
       writeNote.innerHTML = '';
 
       var input = document.createElement('input'),

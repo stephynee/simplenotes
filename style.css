@@ -67,6 +67,11 @@ textarea {
   font-size: 20px;
 }
 
+input,
+textarea {
+    -webkit-text-fill-color: #000000 !important;
+}
+
 .color-select {
   display: flex;
   justify-content: space-between;
