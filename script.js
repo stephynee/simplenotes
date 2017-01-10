@@ -67,6 +67,11 @@
     note.appendChild(innerNoteText);
     noteContainer.insertBefore(note, noteContainer.firstChild);
 
+    //remove note from Dom
+    note.addEventListener('click', function(e) {
+      this.remove();
+    });
+
     //reset write note div
     writeNote.innerHTML = 'Write note';
     writeNote.setAttribute('class', 'white-note');
