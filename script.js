@@ -43,6 +43,12 @@
       writeNote.appendChild(text);
       writeNote.appendChild(colorSelect);
 
+      //increase the height of the text area as the text grows
+      text.addEventListener('input', function() {
+        this.style.height = '44px';
+        this.style.height = this.scrollHeight + 'px';
+      });
+
       //add note to the dom when user submits
       submitButton.addEventListener('click', function(e) {
         submitNote(input, text, e);
@@ -58,6 +64,7 @@
         title = document.createElement('h1'),
         innerNoteText = document.createElement('p');
 
+    //create note and add to DOM
     title.setAttribute('class', 'title');
     title.innerText = noteTitle;
     innerNoteText.innerText = noteText;
