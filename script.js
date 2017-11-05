@@ -1,31 +1,31 @@
 (function() {
 
-  var writeNote = document.querySelector('#write-note');
-  var noteContainer = document.querySelector('.note-container');
-  var colors = ['red-note', 'yellow-note', 'green-note', 'seafoam-note','lightblue-note', 'blue-note', 'purple-note', 'pink-note', 'darkpink-note'];
+  const writeNote = document.querySelector('#write-note');
+  const noteContainer = document.querySelector('.note-container');
+  const colors = ['red-note', 'yellow-note', 'green-note', 'seafoam-note','lightblue-note', 'blue-note', 'purple-note', 'pink-note', 'darkpink-note'];
 
   function openWriteNote() {
-    var writeInner = writeNote.innerHTML;
+    const writeInner = writeNote.innerHTML;
 
     //only open the note if it's collapsed
     if(writeInner === 'Write note') {
       writeNote.innerHTML = '';
 
       //create all the nodes for the writeNote div
-      var input = document.createElement('input'),
-          text = document.createElement('textarea'),
-          colorSelect = document.createElement('div')
-          submitButton = document.createElement('button'),
-          buttonText = document.createTextNode('Done');
+      const input = document.createElement('input');
+      const text = document.createElement('textarea');
+      const colorSelect = document.createElement('div');
+      const submitButton = document.createElement('button');
+      const buttonText = document.createTextNode('Done');
 
       input.setAttribute('placeholder', 'Title');
       text.setAttribute('placeholder', 'Write note');
       colorSelect.setAttribute('class', 'color-select');
 
       //create the color selects
-      for(var i = 0; i < 9; i++) {
+      for(let i = 0; i < 9; i++) {
         (function(i) {
-          var color = document.createElement('div');
+          const color = document.createElement('div');
 
           color.setAttribute('class', colors[i]);
           colorSelect.appendChild(color);
@@ -57,12 +57,12 @@
   }
 
   function submitNote(input, text, e) {
-    var noteTitle = input.value,
-        noteText = text.value,
-        noteColor = writeNote.getAttribute('class');
-        note = document.createElement('div'),
-        title = document.createElement('h1'),
-        innerNoteText = document.createElement('p');
+    const noteTitle = input.value;
+    const noteText = text.value;
+    const noteColor = writeNote.getAttribute('class');
+    const note = document.createElement('div');
+    const title = document.createElement('h1');
+    const innerNoteText = document.createElement('p');
 
     //create note and add to DOM
     title.setAttribute('class', 'title');
